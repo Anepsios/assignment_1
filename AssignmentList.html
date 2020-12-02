@@ -12,12 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
 
 </head>
 
-<body>
+<body onload="AddToAssignmentList()">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <a class="navbar-brand" href="index.html">Bootcamp</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,8 +82,8 @@
         </div>
     </nav>
 
-    <div class="mytable">
-        <table class="table table-striped table-secondary table-responsive-sm">
+    <div class="mytable table-responsive">
+        <table class="table table-striped table-warning">
             <div class="table-head">Assignment</div>
 
             <thead class="table-info">
@@ -92,7 +93,7 @@
                 <th scope="col">Oral Mark</th>
                 <th scope="col">Total Mark</th>
             </thead>
-            <tbody>
+            <tbody id="AssignmentList">
                 <tr>
                     <td>Placeholder</td>
                     <td>Placeholder</td>
@@ -141,8 +142,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="InputAssignmentTitle">Assignment Title</label>
-                                <input type="text" class="form-control" id="InputAssignmentTitle" placeholder="Enter Assignment Title" required
-                                    pattern="[a-zA-Z0-9]+">
+                                <input type="text" class="form-control" id="InputAssignmentTitle"
+                                    placeholder="Enter Assignment Title" required pattern="[a-zA-Z0-9]+">
                             </div>
                             <div class="form-group">
                                 <label for="InputDescription">Description</label>
@@ -150,7 +151,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="InputDateOfBirth">Date Of Birth</label>
-                                <input type="date" class="form-control" id="InputDateOfBirth" placeholder="dd/mm/yyyy" required
+                                <input type="date" class="form-control" id="InputDateOfBirth" placeholder="dd/mm/yyyy"
+                                    required
                                     pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
                             </div>
                             <div class="form-group">
@@ -172,8 +174,6 @@
             </div>
         </div>
     </div>
-
-    <script src="main.js"></script>
 
 </body>
 

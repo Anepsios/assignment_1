@@ -12,12 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
 
 </head>
 
-<body>
+<body onload="AddToCourseList()">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <a class="navbar-brand" href="index.html">Bootcamp</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,8 +82,8 @@
         </div>
     </nav>
 
-    <div class="mytable">
-        <table class="table table-striped table-secondary table-responsive-sm">
+    <div class="mytable table-responsive">
+        <table class="table table-striped table-warning ">
             <div class="table-head">Courses</div>
 
             <thead class="table-info">
@@ -92,7 +93,7 @@
                 <th scope="col">Start Date</th>
                 <th scope="col">End Date</th>
             </thead>
-            <tbody>
+            <tbody id="CourseList">
                 <tr>
                     <td>Placeholder</td>
                     <td>Placeholder</td>
@@ -175,8 +176,6 @@
             </div>
         </div>
     </div>
-
-    <script src="main.js"></script>
 
 </body>
 
